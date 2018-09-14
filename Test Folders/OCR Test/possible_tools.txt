@@ -1,0 +1,13 @@
+OCR
+OpenCV
+pytesseract
+
+do text localization then only do the ocr to make it faster
+max 1s per frame
+300dpi
+
+pytesseract speed up
+https://github.com/tesseract-ocr/tesseract/issues/263
+
+opencv based text recognition that doesnt involve tesseract
+https://github.com/opencv/opencv_contrib/blob/master/modules/text/samples/textdetection.py
