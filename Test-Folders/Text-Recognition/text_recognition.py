@@ -69,7 +69,7 @@ ap.add_argument("-w", "--width", type=int, default=800,
 	help="nearest multiple of 32 for resized width")
 ap.add_argument("-e", "--height", type=int, default=800,
 	help="nearest multiple of 32 for resized height")
-ap.add_argument("-p", "--padding", type=float, default=0.04,
+ap.add_argument("-p", "--padding", type=float, default=0.1,
 	help="amount of padding to add to each border of ROI")
 args = vars(ap.parse_args())
 
@@ -130,8 +130,12 @@ for (startX, startY, endX, endY) in boxes:
 
 	# extract the text from the 
 	roi = orig[startY:endY, startX:endX]
+
+	#binary to increase OCR speed
+	ret, roiBinary = cv2.threshold(roi, 100, 255, cv2.THRESH_BINARY)
+	
 	cv2.rectangle(imageCopy, (startX, startY), (endX, endY), (0, 255, 0), 2)
-	text = pytesseract.image_to_string(roi)
+	text = pytesseract.image_to_string(roiBinary)
 	print(text)
 
 
