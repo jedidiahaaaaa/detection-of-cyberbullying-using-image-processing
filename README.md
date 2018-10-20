@@ -2,7 +2,9 @@
 
 ###### To-Do List
 - [x] Test EAST detection
-- [ ] Test `pytesseract` after EAST detection
+- [x] Test `pytesseract` after EAST detection
+- [ ] Test `pytesseract` with binary image
+- [ ] Apply concurrency on the `text-recognition.py` to process each image and points
 - [ ] Create PG-18 Word Library
-- [ ] Create search algorithm to effectively search through the library 
-- [ ] Learn python threading/concurrent programming in order to divide the images and process those divisions at the same time in order to achieve a more optimized processing time
+- [ ] Check how hard it would be to create deep learning to learn bad words and warn
+- [ ] Create search algorithm to effectively search through the library
