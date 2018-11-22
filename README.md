@@ -3,7 +3,7 @@
 ###### To-Do List
 - [x] Test EAST detection
 - [x] Test `pytesseract` after EAST detection
-- [x] Test `pytesseract` with binary image
+- [ ] Test `pytesseract` with binary image
 - [x] Learn concurrency lock
 - [ ] Test different resize size
 - [ ] Apply concurrency on the `text-recognition.py` to process each image and points
